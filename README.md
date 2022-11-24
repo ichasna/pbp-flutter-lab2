@@ -1,3 +1,28 @@
+# Tugas 9 PBP
+
+### 1. Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+--> Kita dapat mengambil data JSON tanpa membuat model dengan cara membuat dynamic map dari JSON dan mengakses nilainya dengan konsep dictionary ('data[key]'). Namun hal ini tidak lebih baik daripada membuat model sebelum melakukan pengambilan data JSON karena bisa saja terjadi perubahan struktur fields atau hilang atau malah tidak sesuai yang diinginkan, jika hal ini terjadi akan sulit dikelola.
+
+### 2. Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+--> 
+- checkbox = Membuat checkbox dengan event onChange, akan berubah setiap value watchednya berubah. Pada tugas ini berfungsi untuk menandai film yang watched dan unwatched
+- listtile = menampung teks sebagai leading dan trailing
+- textbutton = membuat tombol
+
+### 3. Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+--> Data Json yang telah disediakan sebelumnya pada halaman heroku, diambil menggunakan HTTP yang terdapat di fungsi fetchWatchlist yang akan memanggil fungsi GET yang mengembalikan daftar objek dari MyWatchlist.
+
+FutureBuilder akan memanggil fungsi dan menunggu responnya. Ketika datanya diambil, FutureBuilder akan mengembalikan ListView.builder yang membangun ListTiles dimana telah berisi data yang akan di-mapping dimana didapatkan dari fungsi fetchWatchlist
+
+### 4. Implementasi
+--> 
+- Menambahkan listtile "My Watch List" pada main.dart dan file lainnya yang berada di folder page.
+- Membuat file "watchlist.dart" pada folder model dan mengisi file tersebut dengan code yang saya copy paste dari quicktype, sesuai dengan data json yang tersedia di herokuapp mywatchlist
+- Membuat file "fetch_mywatchlist.dart" pada folder functions untuk mengambil data dari json yang tersedia di herokuapp mywatchlist, lalu membuat file "my_watchlist.dart" pada folder page untuk menampilkan data nya.
+- membuat file "watchlist_detail.dart" pada folder page untuk menampilkan detail setiap movie atau setiap objek yang ada di "my_watchlist.dart"
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # Tugas 8 PBP
 
 ### 1. Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement
