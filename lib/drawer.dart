@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'main.dart';
-import 'form.dart';
-import 'data.dart';
+import 'page/form.dart';
+import 'page/data.dart';
+import 'page/my_watchlist.dart';
 
 class DrawerApp extends StatelessWidget {
   const DrawerApp({key});
@@ -44,6 +45,16 @@ class DrawerApp extends StatelessWidget {
               );
             },
           ),
+          ListTile(
+            title: const Text('My Watch List'),
+            onTap: () {
+                // Route menu ke halaman my watch list
+                Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const MyWatchList()),
+                );
+            },
+            )
         ],
       ),
     );

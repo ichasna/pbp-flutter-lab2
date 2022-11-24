@@ -1,10 +1,10 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
-import 'global.dart';
-import 'form.dart';
+import 'model/global.dart';
+import 'page/form.dart';
 import 'drawer.dart';
-import 'data.dart';
+import 'page/data.dart';
 
 void main() {
   runApp(const CounterApplication());

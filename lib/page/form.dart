@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'main.dart';
-import 'global.dart' as globals;
-import 'drawer.dart';
+import '../main.dart';
+import '../model/global.dart' as globals;
+import '../drawer.dart';
 import 'data.dart';
 
 class MyBudgetFormPage extends StatefulWidget {
